@@ -12,13 +12,16 @@ class ViewController: UIViewController {
     
     var leftDiceIndex : Int = 0
     var rightDiceIndex : Int = 0
+    var score : Int = 0
 
     @IBOutlet weak var leftDice: UIImageView!
     
+
     
     @IBOutlet weak var rightDice: UIImageView!
     
-
+    @IBOutlet weak var scoreCounter: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +39,18 @@ class ViewController: UIViewController {
 
         leftDice.image = UIImage(named: "dice\(leftDiceIndex)")
         rightDice.image = UIImage(named: "dice\(rightDiceIndex)")
+        calculateScore()
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         updateDice()
+    }
+    
+    func calculateScore() {
+        if leftDiceIndex < rightDiceIndex {
+            score += 1
+            scoreCounter.text = String(score)
+        }
     }
     
 }

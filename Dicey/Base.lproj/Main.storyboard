@@ -15,11 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-fF-la7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-fF-la7">
+                                <rect key="frame" x="-19" y="0.0" width="453" height="922"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-jC-iYk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-jC-iYk">
                                 <rect key="frame" x="133.5" y="59" width="147" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-mQ-T0U">
                                 <rect key="frame" x="218" y="350" width="150" height="120"/>
@@ -39,25 +41,33 @@
                                     <action selector="rollDIce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZw-DL-Cy4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4m-gH-bAg">
+                                <rect key="frame" x="156" y="179" width="103" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-2L-X9h">
+                                <rect key="frame" x="162" y="240" width="91" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="jjX-fF-la7" secondAttribute="bottom" id="2QQ-Wb-tgf"/>
-                            <constraint firstItem="JgL-jC-iYk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRk-r4-doB"/>
-                            <constraint firstAttribute="trailing" secondItem="jjX-fF-la7" secondAttribute="trailing" id="J4Z-1W-diV"/>
-                            <constraint firstItem="jjX-fF-la7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oOd-oq-94J"/>
-                            <constraint firstItem="jjX-fF-la7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rhU-ua-qIm"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="leftDice" destination="E5D-mQ-T0U" id="alD-uH-h7C"/>
                         <outlet property="rightDice" destination="uq0-7P-WLN" id="EeZ-NJ-NYg"/>
+                        <outlet property="scoreCounter" destination="VjC-2L-X9h" id="IAz-j4-aiu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+            <point key="canvasLocation" x="136.23188405797103" y="117.1875"/>
         </scene>
     </scenes>
     <resources>
