@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dicey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-fF-la7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-jC-iYk">
+                                <rect key="frame" x="133.5" y="59" width="147" height="96"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-mQ-T0U">
+                                <rect key="frame" x="218" y="350" width="150" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="uq0-7P-WLN">
+                                <rect key="frame" x="49" y="350" width="150" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-5s-dcs">
+                                <rect key="frame" x="82" y="602" width="250" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Roll"/>
+                                <connections>
+                                    <action selector="rollDIce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZw-DL-Cy4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jjX-fF-la7" secondAttribute="bottom" id="2QQ-Wb-tgf"/>
+                            <constraint firstItem="JgL-jC-iYk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRk-r4-doB"/>
+                            <constraint firstAttribute="trailing" secondItem="jjX-fF-la7" secondAttribute="trailing" id="J4Z-1W-diV"/>
+                            <constraint firstItem="jjX-fF-la7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oOd-oq-94J"/>
+                            <constraint firstItem="jjX-fF-la7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rhU-ua-qIm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftDice" destination="E5D-mQ-T0U" id="alD-uH-h7C"/>
+                        <outlet property="rightDice" destination="uq0-7P-WLN" id="EeZ-NJ-NYg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice1" width="150" height="150"/>
+        <image name="dice2" width="150" height="150"/>
+        <image name="diceeLogo" width="147" height="96"/>
+        <image name="newbackground" width="333.5" height="311"/>
+    </resources>
+</document>
